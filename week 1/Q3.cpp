@@ -1,4 +1,8 @@
-/*Write a C program to check whether a number is even or odd.
+/*Write a C program to check whether a given number is an armstrong number or not.
+Test Data :
+Input a number: 153
+Expected Output :
+153 is an Armstrong number.
 */
 #include<bits/stdc++.h>
 using namespace std;
@@ -7,14 +11,11 @@ using namespace std;
 #define PI 3.14
 #define vi vector<int> 
 #define vll vector<long long>
-#define m 1000000007
+#define m 1000000007		
 void solve(){
-	int no;
-	cin>>no;
-	cout<<(no&1?"Odd":"Even");
-	//alternates
-	//cout<<((no^1)<no?"Odd":"Even");
-	//cout<<(no%2?"Odd":"Even");
+	int a,b,c;
+	cin>>a>>b>>c;
+	cout<<max(a,max(b,c));
 }
 int main() {
 	ios_base::sync_with_stdio(0);

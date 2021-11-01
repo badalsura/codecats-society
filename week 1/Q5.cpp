@@ -1,9 +1,4 @@
-/*Write a program in C to display the number in reverse order
-
-Test Data :
-Input a number: 12345
-Expected Output :
-The number in reverse order is : 54321
+/*Write a C program to input any character and check whether it is alphabet, digit or special character.
 */
 #include<bits/stdc++.h>
 using namespace std;
@@ -14,15 +9,11 @@ using namespace std;
 #define vll vector<long long>
 #define m 1000000007
 void solve(){
-	int no,rev_no=0,temp;
-	cin>>no;
-	temp=no;
-	while(no){
-		rev_no*=10;
-		rev_no+=no%10;
-		no/=10;
-	}
-	cout<<"Reverse of "<<temp<<" is "<<rev_no;
+	char character;
+	cin>>character;
+	if((character>64&&character<91)||(character>96&&character<123))cout<<"Alphabet";
+	else if(character>47&&character<58)cout<<"Numeric";
+	else cout<<"Special Character";
 }
 int main() {
 	ios_base::sync_with_stdio(0);
